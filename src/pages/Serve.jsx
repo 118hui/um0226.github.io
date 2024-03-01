@@ -1,48 +1,61 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import Faq from '../components/Faq';
 
+import { NavLink } from 'react-router-dom';
 const Serve = () => {
+  const [showCard, setShowCard] = useState('all');
+
+  const handleProject = (category) => {
+    setShowCard(category);
+  };
   return (
     <section>
       <div className='container px-5 py-24 mx-auto'>
         <div className='flex flex-col text-center w-full mb-12'>
           <h1 className='sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900'>服務項目</h1>
           <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>提供優質課程 !</p>
-          <div className='-mx-4 flex flex-wrap'>
-            <div className='w-full px-4'>
-              <div className='mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20'>
-                <span className='mb-2 block text-xl font-semibold text-primary'>FAQ</span>
-                <h2 className='mb-4 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]'>是否有任何問題?</h2>
-              </div>
-            </div>
-          </div>
-
-          <div className='-mx-4 flex flex-wrap'>
-            <div className='w-full px-4 lg:w-1/2'>
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-            </div>
-            <div className='w-full px-4 lg:w-1/2'>
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-              <AccordionItem header='How long we deliver your first blog post?' text='It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available .' />
-            </div>
+        </div>
+        <div className='w-full flex flex-wrap justify-center -mx-4'>
+          <div className='w-full px-4'>
+            <ul className='flex flex-wrap justify-center mb-12 space-x-1'>
+              <li className='mb-1'>
+                <button onClick={() => handleProject('all')} className={`inline-block rounded-lg py-2 px-5 text-center text-lg font-semibold transition md:py-3 lg:px-8 ${showCard === 'all' ? 'activeClasses bg-amber-500 text-white' : 'inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-sky-900'}`}>
+                  所有課程
+                </button>
+              </li>
+              <li className='mb-1'>
+                <button onClick={() => handleProject('一對一')} className={`inline-block rounded-lg py-2 px-5 text-center text-lg font-semibold transition md:py-3 lg:px-8 ${showCard === '一對一' ? 'activeClasses bg-amber-500 text-white' : 'inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-sky-900'}`}>
+                  一對一
+                </button>
+              </li>
+              <li className='mb-1'>
+                <button onClick={() => handleProject('團體')} className={`inline-block rounded-lg py-2 px-5 text-center text-lg font-semibold transition md:py-3 lg:px-8 ${showCard === '團體' ? 'activeClasses bg-amber-500 text-white' : 'inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-sky-900'}`}>
+                  團體
+                </button>
+              </li>
+              <li className='mb-1'>
+                <button onClick={() => handleProject('安親住宿')} className={`inline-block rounded-lg py-2 px-5 text-center text-lg font-semibold transition md:py-3 lg:px-8 ${showCard === '安親住宿' ? 'activeClasses bg-amber-500 text-white' : 'inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-sky-900'}`}>
+                  安親住宿
+                </button>
+              </li>
+              <li className='mb-1'>
+                <button onClick={() => handleProject('到府照顧')} className={`inline-block rounded-lg py-2 px-5 text-center text-lg font-semibold transition md:py-3 lg:px-8 ${showCard === '到府照顧' ? 'activeClasses bg-amber-500 text-white' : 'inactiveClasses text-body-color dark:text-dark-6 hover:bg-primary hover:text-sky-900'}`}>
+                  到府照顧
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div className='absolute bottom-0 right-0 z-[-1]'>
-          <svg width='1440' height='886' viewBox='0 0 1440 886' fill='none' xmlns='http://www.w3.org/2000/svg'>
-            <path opacity='0.5' d='M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z' fill='url(#paint0_linear)' />
-            <defs>
-              <linearGradient id='paint0_linear' x1='1308.65' y1='1142.58' x2='602.827' y2='-418.681' gradientUnits='userSpaceOnUse'>
-                <stop stopColor='#3056D3' stopOpacity='0.36' />
-                <stop offset='1' stopColor='#F5F2FD' stopOpacity='0' />
-                <stop offset='1' stopColor='#F5F2FD' stopOpacity='0.096144' />
-              </linearGradient>
-            </defs>
-          </svg>
+        <div className='flex flex-wrap -mx-4'>
+          <PortfolioCard ImageHref='https://i.ibb.co/64WfFPt/image-01.jpg' category='一對一' title='狗狗' button='課程內容' buttonHref='#' showCard={showCard} />
+          <PortfolioCard ImageHref='https://i.ibb.co/PT7ghRs/image-06.jpg' category='一對一' title='貓咪' button='課程內容' buttonHref='#' showCard={showCard} />
+          <PortfolioCard ImageHref='https://i.ibb.co/vkt8C1P/image-02.jpg' category='團體' title='狗狗' button='課程內容' buttonHref='#' showCard={showCard} />
+          <PortfolioCard ImageHref='https://i.ibb.co/3FKqS1G/image-03.jpg' category='安親住宿' title='狗狗' button='課程內容' buttonHref='#' showCard={showCard} />
+          <PortfolioCard ImageHref='https://i.ibb.co/m6dq2fX/image-04.jpg' category='到府照顧' title='狗狗' button='課程內容' buttonHref='#' showCard={showCard} />
+          <PortfolioCard ImageHref='https://i.ibb.co/mCPjBsH/image-05.jpg' category='到府照顧' title='貓咪' button='課程內容' buttonHref='#' showCard={showCard} />
         </div>
+        <Faq />
       </div>
     </section>
   );
@@ -50,35 +63,32 @@ const Serve = () => {
 
 export default Serve;
 
-const AccordionItem = ({ header, text }) => {
-  const [active, setActive] = useState(false);
-
-  const handleToggle = (event) => {
-    event.preventDefault();
-    setActive(!active);
-  };
+const PortfolioCard = ({ showCard, category, ImageHref, title, button }) => {
   return (
-    <div className='mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8'>
-      <button className={`faq-btn flex w-full text-left`} onClick={(event) => handleToggle(event)}>
-        <div className='mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5'>
-          <svg className={`fill-primary stroke-primary duration-200 ease-in-out ${active ? 'rotate-180' : ''}`} width='17' height='10' viewBox='0 0 17 10' xmlns='http://www.w3.org/2000/svg'>
-            <path d='M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z' fill='' stroke='' />
-          </svg>
+    <>
+      <div className={`w-full px-4 md:w-1/2 xl:w-1/3 ${showCard === 'all' || showCard === category.toLowerCase() ? 'block' : 'hidden'}`}>
+        <div className='relative mb-12'>
+          <div className='overflow-hidden rounded-[10px]'>
+            <img src={ImageHref} alt='portfolio' className='w-full' />
+          </div>
+          <div className='relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark'>
+            <span className='text-primary mb-2 block text-lg font-bold'>{category}</span>
+            <h3 className='text-dark dark:text-white mb-5 text-xl font-bold'>{title}</h3>
+            <NavLink to='/four' activeClassName='active'>
+              <button className='text-body-color dark:text-dark-6 hover:border-primary hover:bg-sky-900 inline-block rounded-lg border border-black dark:border-dark-3 py-[10px] px-7 text-md font-medium transition hover:text-white'>{button}</button>
+            </NavLink>
+          </div>
         </div>
-
-        <div className='w-full'>
-          <h4 className='mt-1 text-lg font-semibold text-dark dark:text-white'>{header}</h4>
-        </div>
-      </button>
-
-      <div className={`pl-[62px] duration-200 ease-in-out ${active ? 'block' : 'hidden'}`}>
-        <p className='py-3 text-base leading-relaxed text-body-color dark:text-dark-6'>{text}</p>
       </div>
-    </div>
+    </>
   );
 };
 
-AccordionItem.propTypes = {
-  header: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+PortfolioCard.propTypes = {
+  showCard: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  ImageHref: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  button: PropTypes.string.isRequired,
+  buttonHref: PropTypes.string.isRequired,
 };

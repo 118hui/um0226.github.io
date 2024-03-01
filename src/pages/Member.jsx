@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 const Member = () => {
   return (
     <>
@@ -42,9 +44,11 @@ const Member = () => {
 
           <p className='mt-10 text-center text-sm text-gray-500'>
             尚未註冊?{' '}
-            <a href='#' className='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'>
-              開始註冊
-            </a>
+            <NavLink to='/four'>
+              <button href='#' className='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'>
+                開始註冊
+              </button>
+            </NavLink>
           </p>
         </div>
       </div>

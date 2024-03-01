@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
       <div className={`${isOpen ? 'block' : 'hidden'} absolute top-0 right-0 mt-16 bg-sky-900/90 w-[40vh] h-[55vh] shadow-lg p-16 rounded-xl`}>
         <ul className='flex flex-col justify-center items-center'>
           <li>
-            <NavLink exact to='/about' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
+            <NavLink to='/about' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
               關於我們
             </NavLink>
           </li>
@@ -28,7 +28,7 @@ const HamburgerMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to='/limited' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
+            <NavLink to='/limited' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
               期間限定
             </NavLink>
           </li>
@@ -43,12 +43,12 @@ const HamburgerMenu = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to='/contact' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
+            <NavLink to='/contact' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
               聯絡我們
             </NavLink>
           </li>
           <li>
-            <NavLink exact to='/' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
+            <NavLink to='/' onClick={handleOnClick} activeClassName='active' className='text-white hover:text-amber-500 text-[35px]'>
               怪獸商城
             </NavLink>
           </li>

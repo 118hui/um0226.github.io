@@ -1,7 +1,7 @@
 const News = () => {
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
-      <h1 className='sm:text-3xl text-2xl font-bold text-center  text-gray-900 mb-4'>最新消息</h1>
+      <h1 className='sm:text-4xl text-3xl font-bold text-center  text-gray-900 mb-4'>最新消息</h1>
       <div className='mb-10 border-t border-b divide-y'>
         <div className='grid py-8 sm:grid-cols-4'>
           <div className='mb-4 sm:mb-0'>

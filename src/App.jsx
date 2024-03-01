@@ -10,6 +10,7 @@ import Limited from './pages/Limited';
 import Serve from './pages/Serve';
 import Member from './pages/Member';
 import Contact from './pages/Contact';
+import Four from './pages/Four';
 //引入置頂效果
 import ScrollToTop from './components/ScrollToTop';
 
@@ -21,6 +22,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Hero />} />
+          <Route path='/four' element={<Four />} />
           <Route path='/about' element={<About />} />
           <Route path='/know' element={<Know />} />
           <Route path='/limited' element={<Limited />} />

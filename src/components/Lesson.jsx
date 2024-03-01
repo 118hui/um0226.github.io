@@ -4,7 +4,7 @@ const Lesson = () => {
   return (
     <div className='px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20'>
       <div className='max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12'>
-        <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto'>
+        <h2 className='max-w-lg mb-6 font-sans text-3xl text-center font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto'>
           <span className='relative inline-block'></span> 定期課程介紹
         </h2>
         <p className='text-base text-gray-700 md:text-lg'>提供狗、貓，一對一及團體課程，並有安心住宿及到府照顧......等，多項服務課程</p>
@@ -15,7 +15,7 @@ const Lesson = () => {
         </div>
         <div className='p-5 duration-300 transform bg-white border rounded shadow-md hover:-translate-y-2'>
           <div className='flex items-center justify-between mb-2'>
-            <p className='text-xl font-bold leading-5'>一對一</p>
+            <p className='text-xl font-bold leading-5'>一對一課程</p>
             <p className='flex items-center justify-center w-6 h-6 font-bold rounded text-deep-purple-accent-400 bg-amber-400'>1</p>
           </div>
           <p className='text-sm text-gray-900'>Skate ipsum dolor sit amet, alley oop vert mute-air Colby Carter flail 180 berm.</p>
